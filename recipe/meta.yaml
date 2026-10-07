@@ -1,4 +1,4 @@
-{% set version = '0.5-3' %}
+{% set version = "0.5-4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SpecsVerification_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SpecsVerification/SpecsVerification_{{ version }}.tar.gz
-  sha256: 630fd876b51cb5e22061fa64dbb447c09e88c14e81fb801001ae18e969a4e6ec
+  sha256: 5bea494ac8b8128c26439258c19b9bd85a92512979b946f712e0e382017f27f3
 
 build:
-  number: 5
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -46,9 +46,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=SpecsVerification
   license: GPL-2.0-or-later
-  summary: A collection of forecast verification routines developed for the SPECS FP7 project.
-    The emphasis is on comparative verification of ensemble forecasts of weather and
-    climate.
+  summary: A collection of forecast verification routines developed for the SPECS FP7 project. The emphasis is on comparative verification of ensemble forecasts of weather and climate.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
